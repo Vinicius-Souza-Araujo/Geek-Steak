@@ -1,0 +1,126 @@
+
+.wrapper {
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 150px;
+    
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: black;
+    background-image: url(../image/unidades/Cidade.jpg);
+    background-repeat: no-repeat; 
+    background-size: 100%;
+   
+    
+}
+
+h1{
+    text-align: center;
+    margin: 60px 0 40px 0;
+    font-size: 1.5em;
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    background: black;
+    border-radius: 10px;
+    border: 2px solid  red;
+}
+
+.lista-item{
+ background: black;
+ border: 2px solid  red;
+border-radius: 10px;
+ margin-bottom: 20px;
+ padding: 10px;
+ box-shadow: 0 2px 6px rgba(50,50,90,.1);
+}
+
+ .faq-titulo {
+cursor: pointer;
+padding: 10px;
+font-size: 1.4em;
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+ }
+.faq-titulo::before {
+    content: "";
+    display: inline-block;
+    height: 12px;
+    width: 24px;
+    margin-right: 10px;
+    background: white;
+}
+
+.faq-titulo::after{
+  content: '+'; 
+  float: right;
+  transition: transform .3s ease ;
+}
+
+.faq-conteudo{
+padding: 10px;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: .875em;
+line-height: 1.4em;
+display: none;
+}
+
+.carrosel{
+    width: 333px;
+    height: 250px;
+    margin: 50px auto;
+    overflow: hidden;   
+}
+
+.carrosel ul{
+    display: flex;
+    width: 3330px;
+    height: 250;
+    }
+    .carrosel li{
+        position: relative;
+        animation: slide 25s infinite ease-out;
+    }
+
+    @keyframes slide{
+
+        0% {left: 0px}
+        5% {left: 0px}
+        10% {left: -333px}
+        15% {left: -333px}
+        20% {left: -666px}
+        25% {left: -666px}
+        30% {left: -999px}
+        35% {left: -999px}
+        40% {left: -1332px}
+        45% {left: -1332px}
+        50% {left: -1665px}
+        55% {left: -1665px}
+        60% {left: -1998px}
+        65% {left: -1998px}
+        70% {left: -2331px}
+        75% {left: -2331px}
+        80% {left: -2664px}
+        85% {left: -2664px}
+        100% {left: 0px}
+    }
+ 
+
+
+
+.trigger-input{
+    display:none;
+    
+}
+
+.trigger-input:checked + .trigger-wrapper .faq-conteudo{
+display: block;
+}
+
+.trigger-input:checked + .trigger-wrapper .faq-titulo::after{
+    transform: rotate(45deg); 
+ }
